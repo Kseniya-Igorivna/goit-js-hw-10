@@ -21,36 +21,71 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-li {
-  display: ;
+
+section{
+  display: block;
+  gap: 3000px;
+  
 }
 #datetime-picker {
-  width: 200px;
+  margin-left: 30px;
+  width: 272px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #808080;
   border-radius: 5px;
   font-size: 16px;
+  outline: none;
+  color: #2e2f42;
+}
+
+#datetime-picker:hover{
+border-color: #000000;
+}
+
+#datetime-picker:active{
+border-color: #4E75FF;
+}
+
+#datetime-picker:disabled{
+border-color: #808080;
 }
 
 #start-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
+  width: 75px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-size: 16px;
-  cursor: pointer;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color 250 linear;
 }
-#start-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+.disabled {
+  background-color: #cfcfcf;
+    color: #989898;
+}
+.disabled:focus,
+.disabled:hover {
+  background-color: #cfcfcf;
+  color: #989898;
+}
+
+#start-button:focus,
+#start-button:hover {
+  background-color: #6c8cff;
 }
 
 .timer {
+  margin-left: 115px;
+  margin-top: 20px;
   display: flex;
   gap: 10px;
   position: absolute;
-  width: 408px;
+  width: 300px;
   padding: 24px;
   background-color: #ffffff;
   border: 1px dotted #808080;
@@ -79,3 +114,65 @@ li {
   border-radius: 8px;
 }
 
+.form label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.form :nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+
+.form :nth-child(1) input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  height: 40px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.form fieldset {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  border-color: #808080;
+  border-width: 1px;
+}
+
+.form fieldset label {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.form button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.form button :hover{
+  background-color: #6C8CFF;
+}
